@@ -77,11 +77,12 @@
   );
   
   CREATE TABLE IF NOT EXISTS VENDA(
+  id int, 
   id_fornecedor int,
   id_peca int,
   data date,
   quantidade char (11),
-  PRIMARY KEY(id_fornecedor, id_peca),
+  PRIMARY KEY(id),
   FOREIGN KEY (id_fornecedor) REFERENCES fornecedor(ID),
   FOREIGN KEY (id_peca) REFERENCES PECA(id)
   );
@@ -96,5 +97,4 @@
 \d FORNECEDOR
 \d PECA
 \d VENDA
- 
  
